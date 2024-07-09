@@ -27,5 +27,5 @@ Here is the functionnality of my lottery :
 
 ## Credits 🤝
 If you use my code again, please credit me.\
-My github profile : https://github.com/nicolasjp.\
+My github profile : https://github.com/nicolasjp. \
 My portfolio : https://nicolasjp.github.io/Portfolio/.
