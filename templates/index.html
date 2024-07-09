@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Lottery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+    <h1>Ethereum Lottery</h1>
+    {% if contract_address %}
+    <p style="font-style: italic;">Address of the lottery contract: {{ contract_address }}</p>
+    {% endif %}
+    {% if balance %}
+    <p class="solde">Lottery balance: {{ balance }} Ether</p>
+    {% endif %}
+
+    {% if error_message %}
+    <p style="color: rgb(255, 255, 255); font-weight: bold;">{{ error_message }}</p>
+    {% endif %}
+
+    {% if soldevide %}
+    <p class="solde">Lottery balance: {{ soldevide }} Ether</p>
+    {% endif %}
+
+    <form action="/deploy" method="post">
+        <button type="submit" id="deployBtn" {{ 'disabled' if contract_deployed else '' }}>Create a lottery</button>
+    </form>
+
+    <form action="/participate" method="post">
+        <input type="password" name="address" placeholder="Your Ethereum address" required>
+        <input type="password" name="private_key" placeholder="Your private key" required>
+        <input type="number" name="amount" step="1" min="0" placeholder="Quantity (in Ether)" required>
+        <button type="submit">Participate</button>
+    </form>
+
+    <div class="button-container">
+        <form action="/balance" method="get">
+            <button type="submit">Show balance</button>
+        </form>
+
+        <form action="/select_winner" method="post">
+            <button type="submit">Draw the winner</button>
+        </form>
+    </div>
+
+    {% if win_message %}
+    <p style="color: rgb(255, 255, 255); font-weight: bold;">{{ win_message }}</p>
+    {% endif %}
+</body>
+
+</html>
