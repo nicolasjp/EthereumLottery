@@ -26,6 +26,6 @@ Here is the functionnality of my lottery :
     - run the python file (python3 app.py)
 
 ## Credits 🤝
-If you use my code again, please credit me.\
+If you reuse my code, please credit me.\
 My github profile : https://github.com/nicolasjp. \
 My portfolio : https://nicolasjp.github.io/Portfolio/.
