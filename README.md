@@ -25,7 +25,7 @@ Here is the functionnality of my lottery :
     - git clone https://github.com/nicolasjp/EthereumLottery.git
     - run the python file (python3 app.py)
 
-## Credits
-If you use my code again, please credit me.
-My github profile : https://github.com/nicolasjp.
+## Credits 🤝
+If you use my code again, please credit me.\
+My github profile : https://github.com/nicolasjp.\
 My portfolio : https://nicolasjp.github.io/Portfolio/.
